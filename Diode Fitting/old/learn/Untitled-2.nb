@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11305,        304]
+NotebookOptionsPosition[     10441,        273]
+NotebookOutlinePosition[     10787,        288]
+CellTagsIndexPosition[     10744,        285]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"is", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vs", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nvt", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{"0", "\[Equal]", 
+    RowBox[{
+     RowBox[{"nvt", "*", 
+      RowBox[{"Log", "[", 
+       RowBox[{"1", "+", 
+        FractionBox[
+         RowBox[{"vs", "-", "vd"}], 
+         RowBox[{"r", "*", "is"}]]}], "]"}]}], "-", "vd"}]}], ",", "vd"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"icalc", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", "1", "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"j", "=", "1"}], ",", 
+   RowBox[{"j", "<", "3"}], ",", 
+   RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Print", "[", "j", "]"}], "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"icalc", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+     RowBox[{"ClearAll", "[", 
+      RowBox[{"i", ",", "icalc"}], "]"}], "\[IndentingNewLine]", "icalc"}], 
+    "=", 
+    RowBox[{"NSolve", "[", 
+     RowBox[{
+      RowBox[{"i", "==", 
+       RowBox[{"is", "*", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"vs", "[", 
+               RowBox[{"[", "j", "]"}], "]"}], "-", 
+              RowBox[{"i", "*", "r"}]}], ")"}], "/", "nvt"}], "]"}], "-", 
+          "1"}], ")"}]}]}], ",", "i"}], "]"}]}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"ivs", "[", 
+     RowBox[{"[", "j", "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"i", "/.", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"icalc", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", "vs"}], "-", 
+       RowBox[{"i", "*", "r"}]}]}], " ", "/.", 
+     RowBox[{"icalc", "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.617813240195264*^9, 3.6178134911386166`*^9}, {
+  3.6178135315869303`*^9, 3.6178135352751412`*^9}, {3.6178135844429536`*^9, 
+  3.617813585707026*^9}, {3.617813648153598*^9, 3.6178137389847927`*^9}, {
+  3.6178137820352554`*^9, 3.61781387128936*^9}, {3.6178139160829225`*^9, 
+  3.617813950871912*^9}, {3.617814348918679*^9, 3.6178144273791666`*^9}, {
+  3.617814491444831*^9, 3.6178145441598463`*^9}, {3.6178146159409523`*^9, 
+  3.617814720146912*^9}, {3.617814751354697*^9, 3.6178147630203643`*^9}, {
+  3.6178149707532463`*^9, 3.6178151081091022`*^9}, {3.617815333419989*^9, 
+  3.6178154922900763`*^9}, {3.6178155363145943`*^9, 3.6178156404875526`*^9}, {
+  3.6178157281415663`*^9, 3.617815881318327*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.6178158820603695`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.6178150702619376`*^9, {3.6178154130595446`*^9, 3.6178154249682255`*^9}, {
+   3.6178154552539577`*^9, 3.617815493182127*^9}, {3.6178156060475826`*^9, 
+   3.6178156410525846`*^9}, {3.6178157329468412`*^9, 3.61781588206137*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", "1", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6178150702619376`*^9, {3.6178154130595446`*^9, 3.6178154249682255`*^9}, {
+   3.6178154552539577`*^9, 3.617815493182127*^9}, {3.6178156060475826`*^9, 
+   3.6178156410525846`*^9}, {3.6178157329468412`*^9, 3.6178158820623703`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.6178158821153727`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{{3.6178157629925594`*^9, 3.617815882116373*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1"}], "}"}]], "Print",
+ CellChangeTimes->{{3.6178157629925594`*^9, 3.617815882117373*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Times\\)\[NoBreak] in \
+\[NoBreak]\\!\\(icalc\\\\ Null\\\\ Null\\\\ Null\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.6178158821463747`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \[NoBreak]\\!\\(NSolve\
+\\)\[NoBreak], so some solutions may not be found; use Reduce for complete \
+solution information. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \\\"NSolve::ifun\\\"]\\)\
+\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.6178158821983776`*^9}}],
+
+Cell[BoxData["2"], "Print",
+ CellChangeTimes->{{3.6178157629925594`*^9, 3.6178158821993775`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partd"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(icalc \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\[NoBreak] is longer than \
+depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\
+\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
+\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.6178158822293797`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"icalc", "\[LeftDoubleBracket]", "1", 
+  "\[RightDoubleBracket]"}]], "Print",
+ CellChangeTimes->{{3.6178157629925594`*^9, 3.6178158822303796`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Set", "::", "write"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Tag \[NoBreak]\\!\\(Times\\)\[NoBreak] in \
+\[NoBreak]\\!\\(icalc\\\\ Null\\\\ Null\\\\ Null\\)\[NoBreak] is Protected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/write\\\", \
+ButtonNote -> \\\"Set::write\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.6178150702609377`*^9, {3.6178154130575447`*^9, 3.6178154249672256`*^9}, {
+   3.617815455252958*^9, 3.6178154931811275`*^9}, {3.6178156060465827`*^9, 
+   3.617815641050585*^9}, {3.617815732945841*^9, 3.617815882260381*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"j", "=", "1"}], ",", 
+    RowBox[{"j", "<", "3"}], ",", 
+    RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"icalc", "[", 
+      RowBox[{"[", "j", "]"}], "]"}], "=", 
+     RowBox[{
+      RowBox[{"NSolve", "[", 
+       RowBox[{
+        RowBox[{"i", "==", 
+         RowBox[{"is", "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Exp", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"vs", "[", 
+                 RowBox[{"[", "j", "]"}], "]"}], "-", 
+                RowBox[{"i", "*", "r"}]}], ")"}], "/", "nvt"}], "]"}], "-", 
+            "1"}], ")"}]}]}], ",", "i"}], "]"}], "\[IndentingNewLine]", 
+      RowBox[{"icalc", "[", 
+       RowBox[{"[", "j", "]"}], "]"}], "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"vs", "[", 
+        RowBox[{"[", "j", "]"}], "]"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+   "]"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.617815086409861*^9, 3.6178150872639103`*^9}, 
+   3.617815444848363*^9}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.61781466451573*^9}]
+},
+WindowSize->{707, 457},
+WindowMargins->{{138, Automatic}, {Automatic, 30}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 3054, 80, 328, "Input"],
+Cell[3636, 104, 729, 14, 39, "Message"],
+Cell[4368, 120, 295, 5, 31, "Output"],
+Cell[4666, 127, 399, 9, 31, "Output"],
+Cell[5068, 138, 729, 14, 39, "Message"],
+Cell[CellGroupData[{
+Cell[5822, 156, 95, 1, 23, "Print"],
+Cell[5920, 159, 140, 3, 23, "Print"]
+}, Open  ]],
+Cell[6075, 165, 701, 13, 21, "Message"],
+Cell[6779, 180, 729, 14, 39, "Message"],
+Cell[7511, 196, 97, 1, 23, "Print"],
+Cell[7611, 199, 718, 14, 21, "Message"],
+Cell[8332, 215, 170, 3, 23, "Print"],
+Cell[8505, 220, 699, 13, 21, "Message"]
+}, Open  ]],
+Cell[9219, 236, 1129, 32, 112, "Input"],
+Cell[10351, 270, 86, 1, 52, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
